@@ -14,15 +14,15 @@ public class CreatesACaseTest {
     public void beforeEach() throws ATUTestRecorderException {
         this.Case = new CreatesACasePage();
     }
-    @AfterEach
-    public void afterEach() throws ATUTestRecorderException {
-        this.Case.close();
-    }
+    //@AfterEach
+    //public void afterEach() throws ATUTestRecorderException {
+        //this.Case.close();
+    //}
 
     @Test
     public void ChoisenCarrerAndCreateACase() throws InterruptedException {
 
-        this.Case.login("anderson.gomes+mentee001@go2atlas.com", "12345");
+        this.Case.login("anderson.gomes+mentee002@go2atlas.com", "12345");
         this.Case.submit();
         Thread.sleep(10000);
         this.Case.SliderMenu();

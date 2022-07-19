@@ -43,6 +43,8 @@ public class RespondsToACaseTest {
         this.Responds.CostComments();
         Thread.sleep(5000);
         this.Responds.SubmitComments();
+        Thread.sleep(5000);
+
 
 
 

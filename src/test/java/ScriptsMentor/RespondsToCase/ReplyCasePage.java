@@ -51,7 +51,7 @@ public class ReplyCasePage {
     }
 
     public void ChooseCase() {
-        browser.findElement(By.xpath("//div[@id='cell_13']/div/div/div/div/div")).click();
+        browser.findElement(By.xpath("//*[contains(text(),'Reviewing')]")).click();
     }
 
     public void WaitForLoading() throws InterruptedException {
@@ -107,7 +107,7 @@ public class ReplyCasePage {
     }
 
     public void CostComments() {
-        browser.findElement(By.id("'UserCaseResponseCostRemarks")).sendKeys(lorem.getTitle(2, 2));
+        browser.findElement(By.id("UserCaseResponseCostRemarks")).sendKeys(lorem.getTitle(2, 2));
     }
 
     public void SubmitComments() {

@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
@@ -56,12 +57,14 @@ public class CreatesACasePage {
     }
     public void CarrerArchitectureAndEngineering() {
 
-        browser.findElement(By.id("GroupFocusSearchCareer")).click();
-            WebElement dropdown = browser.findElement(By.id("GroupFocusSearchCareer"));
-            List<WebElement> options = dropdown.findElements(By.cssSelector("#GroupFocusSearchCareer >div  div"));
-            Random rand = new Random();
-            int list= rand.nextInt(options.size())+1;
-            options.get(list).click();
+
+        WebElement dropdown = browser.findElement(By.id("GroupFocusSearchCareer"));
+        List<WebElement> options = dropdown.findElements(By.cssSelector(".group-item h2"));
+        Random rand = new Random();
+        int list= rand.nextInt(options.size());
+        options.get(list).click();
+
+
     }
     public void Save() {
         browser.findElement(By.id("BTN_AppMentorshipCaseSubmit")).click();
@@ -78,22 +81,22 @@ public class CreatesACasePage {
     }
     public void Problem() {
         Lorem lorem = LoremIpsum.getInstance();
-        browser.findElement(By.id("ProblemDescription")).sendKeys(lorem.getParagraphs(2, 4));
+        browser.findElement(By.id("ProblemDescription")).sendKeys(lorem.getParagraphs(2, 3));
     }
     public void Carrer() {
         browser.findElement(By.cssSelector(".Input:nth-child(1)")).click();
         WebElement dropdown = browser.findElement(By.id("GroupFocusSearchCareer"));
-        List<WebElement> options = dropdown.findElements(By.cssSelector("#GroupFocusSearchCareer >div "));
+        List<WebElement> options = dropdown.findElements(By.cssSelector(".group-item h2"));
         Random rand = new Random();
-        int list= rand.nextInt(options.size())+1;
+        int list= rand.nextInt(options.size());
         options.get(list).click();
     }
     public void ContextTags() {
         browser.findElement(By.id("ContextTagsInput")).click();
         WebElement dropdown = browser.findElement(By.id("ContextTagsInput"));
-        List<WebElement> options = dropdown.findElements(By.cssSelector("#ContextTagsInput  >select  option"));
+        List<WebElement> options = dropdown.findElements(By.cssSelector("select  option"));
         Random rand = new Random();
-        int list= rand.nextInt(options.size())+1;
+        int list= rand.nextInt(options.size());
         options.get(list).click();
     }
 
