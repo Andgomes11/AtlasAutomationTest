@@ -29,12 +29,16 @@ public class CreationPerfilPage {
     public CreationPerfilPage() throws ATUTestRecorderException {
         System.setProperty("webdriver.chrome.driver", "Drivers/Chrome-chromedriver/chromedriver.exe");
         this.browser = new ChromeDriver();
-        DateFormat d = new SimpleDateFormat("yy−mm−dd HH−mm−ss");
-        Date date = new Date ();
-        recorder = new ATUTestRecorder("\\C:\\Users\\ander\\OneDrive\\Área de Trabalho\\Evidencias de Test\\", "Video Test"+d.format(date), false);
-        recorder.start();
         browser.navigate().to(URL_USERLOGIN);
         browser.manage().window().maximize();
+
+        DateFormat d = new SimpleDateFormat("yy−mm−dd HH−mm−ss");
+        Date date = new Date ();
+
+        recorder = new ATUTestRecorder("C:\\Users\\ander\\OneDrive\\Área de Trabalho\\AtlasAutomationTest\\Test Evidence\\Mentor", "Creation Perfil Test"+d.format(date), false);
+        recorder.start();
+
+
     }
 
     public void close() {

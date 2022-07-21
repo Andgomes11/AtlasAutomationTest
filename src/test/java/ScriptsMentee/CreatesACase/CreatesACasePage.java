@@ -12,10 +12,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
+
 
 
 public class CreatesACasePage {
@@ -32,7 +33,7 @@ public class CreatesACasePage {
         DateFormat d = new SimpleDateFormat("yy−mm−dd HH−mm−ss");
         Date date = new Date ();
 
-        recorder = new ATUTestRecorder("C:\\Users\\ander\\Documents", "video test Case"+d.format(date), false);
+        recorder = new ATUTestRecorder("C:\\Users\\ander\\OneDrive\\Área de Trabalho\\AtlasAutomationTest\\Test Evidence\\Mentee", "Creates A Case Test"+d.format(date), false);
         recorder.start();
 
 
@@ -63,7 +64,6 @@ public class CreatesACasePage {
         Random rand = new Random();
         int list= rand.nextInt(options.size());
         options.get(list).click();
-
 
     }
     public void Save() {

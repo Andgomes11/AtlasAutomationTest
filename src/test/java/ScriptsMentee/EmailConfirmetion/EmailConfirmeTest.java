@@ -1,5 +1,7 @@
 package ScriptsMentee.EmailConfirmetion;
 
+import atu.testrecorder.ATUTestRecorder;
+import atu.testrecorder.exceptions.ATUTestRecorderException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -8,12 +10,13 @@ public class EmailConfirmeTest {
 
     private EmailConfirmetionPage EmailPage;
 
+
     @BeforeEach
-    public void beforeEach() {
+    public void beforeEach() throws ATUTestRecorderException {
         this.EmailPage = new EmailConfirmetionPage();
     }
     @AfterEach
-    public void afterEach() {
+    public void afterEach() throws ATUTestRecorderException {
         this.EmailPage.close();
     }
 
@@ -26,8 +29,10 @@ public class EmailConfirmeTest {
         EmailPage.loginpassword("pp181121");
         Thread.sleep(1000);
         EmailPage.nextpassword();
-        Thread.sleep(1000);
+        Thread.sleep(5000);
         EmailPage.findemail();
+        Thread.sleep(5000);
+
 
     }
 

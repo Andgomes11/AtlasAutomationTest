@@ -14,10 +14,10 @@ public class CreatesACaseTest {
     public void beforeEach() throws ATUTestRecorderException {
         this.Case = new CreatesACasePage();
     }
-    //@AfterEach
-    //public void afterEach() throws ATUTestRecorderException {
-        //this.Case.close();
-    //}
+    @AfterEach
+    public void afterEach() throws ATUTestRecorderException {
+        this.Case.close();
+    }
 
     @Test
     public void ChoisenCarrerAndCreateACase() throws InterruptedException {

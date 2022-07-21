@@ -21,7 +21,6 @@ public class ReplyCasePage {
     private WebDriver browser;
     ATUTestRecorder recorder;
     Lorem lorem = LoremIpsum.getInstance();
-
     public ReplyCasePage() throws ATUTestRecorderException {
         System.setProperty("webdriver.chrome.driver", "Drivers/Chrome-chromedriver/chromedriver.exe");
         this.browser = new ChromeDriver();
@@ -31,16 +30,13 @@ public class ReplyCasePage {
         DateFormat d = new SimpleDateFormat("yy−mm−dd HH−mm−ss");
         Date date = new Date ();
 
-        recorder = new ATUTestRecorder("C:\\Users\\ander\\Documents", "ReplyCase"+d.format(date), false);
+        recorder = new ATUTestRecorder("C:\\Users\\ander\\OneDrive\\Área de Trabalho\\AtlasAutomationTest\\Test Evidence\\Mentor", "Reply Case Test"+d.format(date), false);
         recorder.start();
-
     }
-
     public void close() throws ATUTestRecorderException {
         browser.quit();
         recorder.stop();
     }
-
     public void login(String username, String password) {
         browser.findElement(By.xpath("//input[@type='email']")).sendKeys(username);
         browser.findElement(By.xpath("//input[@type='password']")).sendKeys(password);
@@ -49,25 +45,20 @@ public class ReplyCasePage {
         browser.findElement(By.xpath("//button[contains(.,'Log In')]")).click();
         browser.findElement(By.xpath("//button[contains(.,'Log In')]")).click();
     }
-
     public void ChooseCase() {
         browser.findElement(By.xpath("//*[contains(text(),'Reviewing')]")).click();
     }
-
     public void WaitForLoading() throws InterruptedException {
 
         Thread.sleep(10000);
     }
-
     public void CaseResponseTitle() {
         browser.findElement(By.id("UserCaseResponseTitle")).sendKeys(lorem.getTitle(2, 4));
     }
-
     public void CaseResponseDescription() {
         browser.findElement(By.id("UserCaseResponseDescription")).sendKeys(lorem.getTitle(2, 4));
 
     }
-
     public void RiskLevel() {
         browser.findElement(By.id("UserResponseRiskLevel")).click();
         WebElement dropdown = browser.findElement(By.id("UserResponseRiskLevel"));
@@ -76,8 +67,6 @@ public class ReplyCasePage {
         int list= rand.nextInt(options.size());
         options.get(list).click();
     }
-
-
     public void EffortLevel() {
         browser.findElement(By.id("UserResponseEffortLevel")).click();
         WebElement dropdown = browser.findElement(By.id("UserResponseEffortLevel"));
@@ -86,7 +75,6 @@ public class ReplyCasePage {
         int list= rand.nextInt(options.size());
         options.get(list).click();
     }
-
     public void CostLevel() {
         browser.findElement(By.id("UserResponseCostLevel")).click();
         WebElement dropdown = browser.findElement(By.id("UserResponseCostLevel"));
@@ -95,21 +83,15 @@ public class ReplyCasePage {
         int list = rand.nextInt(options.size());
         options.get(list).click();
     }
-
         public void RiskComments() {
         browser.findElement(By.id("UserCaseResponseRiskRemarks")).sendKeys(lorem.getTitle(2, 2));
-
     }
-
-
     public void EffortComments() {
         browser.findElement(By.id("UserCaseResponseEffortRemarks")).sendKeys(lorem.getTitle(2, 2));
     }
-
     public void CostComments() {
         browser.findElement(By.id("UserCaseResponseCostRemarks")).sendKeys(lorem.getTitle(2, 2));
     }
-
     public void SubmitComments() {
         browser.findElement(By.xpath("//button[contains(text(),'Submit')]")).click();
     }

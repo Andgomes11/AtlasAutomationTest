@@ -1,21 +1,37 @@
 package ScriptsMentee.Registration;
 
+import atu.testrecorder.ATUTestRecorder;
+import atu.testrecorder.exceptions.ATUTestRecorderException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class RegistrationPage {
 
     private WebDriver browser;
+    ATUTestRecorder recorder;
 
-    public RegistrationPage() {
+    public RegistrationPage() throws ATUTestRecorderException {
         System.setProperty("webdriver.chrome.driver", "Drivers/Chrome-chromedriver/chromedriver.exe");
         this.browser = new ChromeDriver();
         this.browser.navigate().to("https://app.go2atlas.com/version-v0-2-011a-uelinton/user-signup");
+        browser.manage().window().maximize();
+
+        DateFormat d = new SimpleDateFormat("yy−mm−dd HH−mm−ss");
+        Date date = new Date ();
+
+        recorder = new ATUTestRecorder("C:\\Users\\ander\\OneDrive\\Área de Trabalho\\AtlasAutomationTest\\Test Evidence\\Mentee", "Registration Test"+d.format(date), false);
+        recorder.start();
+
     }
 
-    public void close() {
+    public void close() throws ATUTestRecorderException {
         this.browser.quit();
+        recorder.stop();
     }
 
     public void FillInRegistrationForm(String Username, String Password) {

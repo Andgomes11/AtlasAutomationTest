@@ -1,5 +1,7 @@
 package ScriptsMentee.CreationPerfil;
 
+import atu.testrecorder.exceptions.ATUTestRecorderException;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -9,11 +11,11 @@ public class CreationPerfilTest {
     private CreationPerfilPage loginUser;
 
     @BeforeEach
-    public void beforeEach() {
+    public void beforeEach() throws ATUTestRecorderException {
         this.loginUser = new CreationPerfilPage();
     }
-    //@AfterEach
-    public void afterEach() {
+    @AfterEach
+    public void afterEach() throws ATUTestRecorderException {
         this.loginUser.close();
     }
 
@@ -42,7 +44,7 @@ public class CreationPerfilTest {
         Thread.sleep(5000);
         this.loginUser.EducationalDegree();
         this.loginUser.CheckBox();
-        //this.loginUser.Save();
+        this.loginUser.Save();
 
 
 
