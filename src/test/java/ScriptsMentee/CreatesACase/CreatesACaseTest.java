@@ -26,19 +26,31 @@ public class CreatesACaseTest {
         this.Case.submit();
         Thread.sleep(10000);
         this.Case.SliderMenu();
+        Thread.sleep(5000);
         this.Case.ChoseCarrer();
-        Thread.sleep(10000);
-        this.Case.CarrerArchitectureAndEngineering();
+        Thread.sleep(5000);
+        this.Case.SearchACareer();
+        Thread.sleep(5000);
+        this.Case.FilterCareerDomain();
+        Thread.sleep(5000);
+        this.Case.ChooseCareer();
+        Thread.sleep(5000);
         this.Case.Save();
         Thread.sleep(10000);
         this.Case.SliderMenu();
+        Thread.sleep(5000);
         this.Case.NewCase();
-        Thread.sleep(10000);
+        Thread.sleep(5000);
         this.Case.Title();
+        Thread.sleep(5000);
         this.Case.Problem();
+        Thread.sleep(5000);
         this.Case.Carrer();
+        Thread.sleep(5000);
         this.Case.ContextTags();
+        Thread.sleep(5000);
         this.Case.Submitted();
+        Thread.sleep(5000);
 
 
 
