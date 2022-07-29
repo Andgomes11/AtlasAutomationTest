@@ -21,7 +21,7 @@ public class CreationPerfilTest {
 
     @Test
     public void MustLogIn() throws InterruptedException {
-        this.loginUser.login("anderson.gomes+mentee005@go2atlas.com", "123456");
+        this.loginUser.login("anderson.gomes+mentee006@go2atlas.com", "123456");
         this.loginUser.submit();
         Thread.sleep(5000);
         this.loginUser.Gender();
@@ -43,8 +43,8 @@ public class CreationPerfilTest {
         this.loginUser.CareerPosition();
         Thread.sleep(5000);
         this.loginUser.EducationalDegree();
-        //this.loginUser.CheckBox();
-        this.loginUser.Save();
+        this.loginUser.CheckBox();
+        //this.loginUser.Save();
         Thread.sleep(5000);
 
 
