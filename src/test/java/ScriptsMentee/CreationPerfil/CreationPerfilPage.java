@@ -20,7 +20,7 @@ import java.util.Random;
 public class CreationPerfilPage {
 
 
-    public static final String URL_USERLOGIN = "https://app.go2atlas.com/version-v0-2-011a-uelinton/user-login/";
+    public static final String URL_USERLOGIN = "https://app.go2atlas.com/version-v0-2-011b-uelinton/user-login/";
     private WebDriver browser;
     ATUTestRecorder recorder;
 
@@ -51,8 +51,8 @@ public class CreationPerfilPage {
 
     }
     public void submit() {
-        browser.findElement(By.xpath("//button[contains(.,'Log In')]")).click();
-        browser.findElement(By.xpath("//button[contains(.,'Log In')]")).click();
+        browser.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/button[1]")).click();
+        browser.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/button[1]")).click();
 
     }
 
@@ -134,7 +134,7 @@ public class CreationPerfilPage {
     }
 
     public void CheckBox() {
-        browser.findElement(By.id("id=1657291147987x8744")).click();
+        browser.findElement(By.id("id=UserSendEmailOptIn")).click();
     }
 
     public void Save() {

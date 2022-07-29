@@ -51,16 +51,15 @@ public class CreatesACasePage {
     }
 
     public void submit() {
-        browser.findElement(By.xpath("//button[contains(.,'Log In')]")).click();
-        browser.findElement(By.xpath("//button[contains(.,'Log In')]")).click();
+        browser.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/button[1]")).click();
+        browser.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/button[1]")).click();
     }
 
     public void SliderMenu() {
-        browser.findElement(By.id("SlidebarMenu")).click();
-    }
+        browser.findElement(By.xpath("//div[@id='SlidebarMenu']")).click();}
 
     public void ChoseCarrer() {
-        browser.findElement(By.xpath("//div[contains(text(),'Choose Career')]")).click();
+        browser.findElement(By.xpath("/html/body/div[11]/div[3]")).click();
     }
 
     public void SearchACareer() {

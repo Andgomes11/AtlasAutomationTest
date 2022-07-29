@@ -43,8 +43,9 @@ public class CreationPerfilTest {
         this.loginUser.CareerPosition();
         Thread.sleep(5000);
         this.loginUser.EducationalDegree();
-        this.loginUser.CheckBox();
+        //this.loginUser.CheckBox();
         this.loginUser.Save();
+        Thread.sleep(5000);
 
 
 

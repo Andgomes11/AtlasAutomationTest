@@ -19,7 +19,7 @@ public class RegistrationTest {
 
     @Test
     public void PutDataForCreatingARecord() throws InterruptedException {
-        RegistrationPage.FillInRegistrationForm("anderson.gomes+mentor001@go2atlas.com", "123456");
+        RegistrationPage.FillInRegistrationForm("anderson.gomes+mentor002@go2atlas.com", "123456");
         RegistrationPage.WaitForLoading();
         RegistrationPage.SignUp();
         RegistrationPage.WaitForLoading();

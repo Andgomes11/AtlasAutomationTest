@@ -45,6 +45,6 @@ public class RegistrationPage {
 
 
     public void WaitForLoading() throws InterruptedException {
-        Thread.sleep(2000);
+        Thread.sleep(5000);
     }
 }
