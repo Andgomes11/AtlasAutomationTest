@@ -91,7 +91,7 @@ public class CreatesACasePage {
     }
 
     public void NewCase() {
-        browser.findElement(By.xpath("//div[contains(text(),'New Case')]")).click();
+        browser.findElement(By.xpath("//body/div[11]/div[4]")).click();
 
     }
 
@@ -107,9 +107,9 @@ public class CreatesACasePage {
     }
 
     public void Carrer() {
-        browser.findElement(By.cssSelector(".Input:nth-child(1)")).click();
-        WebElement dropdown = browser.findElement(By.id("GroupFocusSearchCareer"));
-        List<WebElement> options = dropdown.findElements(By.cssSelector("#GroupFocusSearchCareer h2"));
+        browser.findElement(By.xpath("//body/div[1]/div[4]/div[1]/div[7]/select[1]")).click();
+        WebElement dropdown = browser.findElement(By.xpath("//body/div[1]/div[4]/div[1]/div[7]/select[1]"));
+        List<WebElement> options = dropdown.findElements(By.cssSelector("option"));
         Random rand = new Random();
         int list = rand.nextInt(options.size());
         options.get(list).click();

@@ -20,6 +20,9 @@ public class RegistrationTest {
 
     @Test
     public void PutDataForCreatingARecord() throws InterruptedException {
+        Thread.sleep(5000);
+        RegistrationPage.language();
+        Thread.sleep(5000);
         RegistrationPage.FillInRegistrationForm("anderson.gomes+mentee006@go2atlas.com", "123456");
         RegistrationPage.WaitForLoading();
         RegistrationPage.SignUp();

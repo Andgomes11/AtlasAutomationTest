@@ -38,7 +38,7 @@ public class CreatesACaseTest {
         this.Case.Save();
         Thread.sleep(10000);
         this.Case.SliderMenu();
-        Thread.sleep(10000);
+        Thread.sleep(5000);
         this.Case.NewCase();
         Thread.sleep(5000);
         this.Case.Title();
@@ -51,10 +51,6 @@ public class CreatesACaseTest {
         Thread.sleep(5000);
         this.Case.Submitted();
         Thread.sleep(5000);
-
-
-
-
     }
 
 
