@@ -17,7 +17,7 @@ import java.util.Random;
 
 public class ReplyCasePage {
 
-    public static final String URL_USERLOGIN = "https://app.go2atlas.com/version-v0-2-011a-uelinton/user-login/1657539414174x991748962311625900";
+    public static final String URL_USERLOGIN = "https://app.go2atlas.com/version-v0-2-011b-uelinton/user-login/1657539414174x991748962311625900";
     private WebDriver browser;
     ATUTestRecorder recorder;
     Lorem lorem = LoremIpsum.getInstance();

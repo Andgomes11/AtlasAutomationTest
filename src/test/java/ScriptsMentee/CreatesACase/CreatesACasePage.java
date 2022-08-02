@@ -21,7 +21,7 @@ import java.util.Random;
 
 public class CreatesACasePage {
 
-    public static final String URL_USERLOGIN = "https://app.go2atlas.com/version-v0-2-011b-uelinton/user-login";
+    public static final String URL_USERLOGIN = "https://app.go2atlas.com/version-test/user-login";
     private WebDriver browser;
     ATUTestRecorder recorder;
 
@@ -127,5 +127,13 @@ public class CreatesACasePage {
     public void Submitted() {
         browser.findElement(By.xpath("//button[contains(text(),'send')]")).click();
         browser.findElement(By.xpath("//button[contains(text(),'send')]")).click();
+    }
+    public void language() {
+        browser.findElement(By.xpath("//body/div[1]/div[2]/div[1]/div[1]/select[1]")).click();
+        WebElement dropdown = browser.findElement(By.xpath("//body/div[1]/div[2]/div[1]/div[1]/select[1]"));
+        List<WebElement> options = dropdown.findElements(By.cssSelector("option"));
+        Random rand = new Random();
+        int list = rand.nextInt(options.size());
+        options.get(list + 1).click();
     }
 }

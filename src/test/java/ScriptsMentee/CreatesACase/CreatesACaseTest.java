@@ -20,7 +20,8 @@ public class CreatesACaseTest {
 
     @Test
     public void ChoisenCarrerAndCreateACase() throws InterruptedException {
-
+        this.Case.language();
+        Thread.sleep(10000);
         this.Case.login("anderson.gomes+mentee002@go2atlas.com", "12345");
         this.Case.submit();
         Thread.sleep(10000);
@@ -37,7 +38,7 @@ public class CreatesACaseTest {
         this.Case.Save();
         Thread.sleep(10000);
         this.Case.SliderMenu();
-        Thread.sleep(5000);
+        Thread.sleep(10000);
         this.Case.NewCase();
         Thread.sleep(5000);
         this.Case.Title();

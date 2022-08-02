@@ -20,7 +20,7 @@ import java.util.Random;
 public class CreationPerfilPage {
 
 
-    public static final String URL_USERLOGIN = "https://app.go2atlas.com/version-v0-2-011b-uelinton/user-login/";
+    public static final String URL_USERLOGIN = "https://app.go2atlas.com/version-test/user-login";
     private WebDriver browser;
     ATUTestRecorder recorder;
 
@@ -31,9 +31,9 @@ public class CreationPerfilPage {
         browser.manage().window().maximize();
 
         DateFormat d = new SimpleDateFormat("yy−mm−dd HH−mm−ss");
-        Date date = new Date ();
+        Date date = new Date();
 
-        recorder = new ATUTestRecorder("C:\\Users\\ander\\OneDrive\\Área de Trabalho\\AtlasAutomationTest\\Test Evidence\\Mentee", "Creation Perfil Test"+d.format(date), false);
+        recorder = new ATUTestRecorder("C:\\Users\\ander\\OneDrive\\Área de Trabalho\\AtlasAutomationTest\\Test Evidence\\Mentee", "Creation Perfil Test" + d.format(date), false);
         recorder.start();
 
     }
@@ -50,6 +50,7 @@ public class CreationPerfilPage {
         browser.findElement(By.xpath("//input[@type='password']")).sendKeys(password);
 
     }
+
     public void submit() {
         browser.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/button[1]")).click();
         browser.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/button[1]")).click();
@@ -61,15 +62,46 @@ public class CreationPerfilPage {
         WebElement dropdown = browser.findElement(By.id("UserGender"));
         List<WebElement> options = dropdown.findElements(By.cssSelector("#UserGender >option"));
         Random rand = new Random();
-        int list= rand.nextInt(options.size());
+        int list = rand.nextInt(options.size());
 
         options.get(list).click();
     }
 
-    public void Avatar()  {
+    public void Avatar() throws InterruptedException {
         browser.findElement(By.id("UserAvatar")).click();
-        browser.findElement(By.id("BTN_AppMentorshipUserAvatarRandom")).click();
-        browser.findElement(By.id("BTN_AppMentorshipUserAvatarChoosen")).click();
+        //browser.findElement(By.id("BTN_AppMentorshipUserAvatarRandom")).click();
+        //browser.findElement(By.id("BTN_AppMentorshipUserAvatarChoosen")).click();
+        browser.findElement(By.id("dropDownHair")).click();
+        WebElement dropdown = browser.findElement(By.id("dropDownHair"));
+        List<WebElement> options = dropdown.findElements(By.cssSelector("#dropDownHair >option"));
+        Random rand = new Random();
+        int list = rand.nextInt(options.size());
+        options.get(list).click();
+
+        browser.findElement(By.id("dropDownGlasses")).click();
+        WebElement dropdown2 = browser.findElement(By.id("dropDownGlasses"));
+        List<WebElement> options2 = dropdown2.findElements(By.cssSelector("#dropDownGlasses >option"));
+        Random rand2 = new Random();
+        int list2 = rand2.nextInt(options2.size());
+        options2.get(list2).click();
+
+        browser.findElement(By.id("dropDownGlasses")).click();
+        WebElement dropdown3 = browser.findElement(By.id("dropDownGlasses"));
+        List<WebElement> options3 = dropdown3.findElements(By.cssSelector("#dropDownGlasses >option"));
+        Random rand3 = new Random();
+        int list3 = rand3.nextInt(options3.size());
+        options3.get(list3).click();
+
+
+        browser.findElement(By.id("dropDownBeard")).click();
+        WebElement dropdown4 = browser.findElement(By.id("dropDownBeard"));
+        List<WebElement> options4 = dropdown4.findElements(By.cssSelector("#dropDownBeard >option"));
+        Random rand4 = new Random();
+        int list4 = rand4.nextInt(options4.size());
+        options4.get(list4).click();
+        Thread.sleep(5000);
+
+        browser.findElement(By.id("BTN_AppMentorshipCaseSubmit")).click();
     }
 
     public void FirstName() {
@@ -77,6 +109,7 @@ public class CreationPerfilPage {
         browser.findElement(By.id("UserFirstName")).sendKeys(lorem.getName());
 
     }
+
     public void LastName() {
         Lorem lorem = LoremIpsum.getInstance();
         browser.findElement(By.id("UserLastName")).sendKeys(lorem.getLastName());
@@ -87,8 +120,8 @@ public class CreationPerfilPage {
         WebElement dropdown = browser.findElement(By.id("UserMonthBirth"));
         List<WebElement> options = dropdown.findElements(By.cssSelector("#UserMonthBirth >option"));
         Random rand = new Random();
-        int list= rand.nextInt(options.size());
-        options.get(list+1).click();
+        int list = rand.nextInt(options.size());
+        options.get(list + 1).click();
     }
 
     public void YearBirth() {
@@ -96,7 +129,7 @@ public class CreationPerfilPage {
         WebElement dropdown = browser.findElement(By.id("UserYearBirth"));
         List<WebElement> options = dropdown.findElements(By.cssSelector("#UserYearBirth >option"));
         Random rand = new Random();
-        int list= rand.nextInt(options.size());
+        int list = rand.nextInt(options.size());
         options.get(list).click();
     }
 
@@ -105,13 +138,14 @@ public class CreationPerfilPage {
         browser.findElement(By.xpath("//div[@id='UserLocation']/span/input[2]")).sendKeys(lorem.getCity());
         browser.findElement(By.xpath("//div[@id='UserLocation']/span/input[2]")).sendKeys(Keys.TAB);
     }
+
     public void Stage() {
         browser.findElement(By.id("UserCurrentCareerStage")).click();
         WebElement dropdown = browser.findElement(By.id("UserCurrentCareerStage"));
         List<WebElement> options = dropdown.findElements(By.cssSelector("#UserCurrentCareerStage >option"));
         Random rand = new Random();
-        int list= rand.nextInt(options.size());
-        options.get(list+1).click();
+        int list = rand.nextInt(options.size());
+        options.get(list + 1).click();
 
     }
 
@@ -120,8 +154,8 @@ public class CreationPerfilPage {
         WebElement dropdown = browser.findElement(By.id("UserCareerPosition"));
         List<WebElement> options = dropdown.findElements(By.cssSelector("#UserCareerPosition >option"));
         Random rand = new Random();
-        int list= rand.nextInt(options.size());
-        options.get(list+1).click();
+        int list = rand.nextInt(options.size());
+        options.get(list).click();
     }
 
     public void EducationalDegree() {
@@ -129,18 +163,28 @@ public class CreationPerfilPage {
         WebElement dropdown = browser.findElement(By.id("UserCurrentEducationalDegree"));
         List<WebElement> options = dropdown.findElements(By.cssSelector("#UserCurrentEducationalDegree >option"));
         Random rand = new Random();
-        int list= rand.nextInt(options.size());
-        options.get(list+1).click();
+        int list = rand.nextInt(options.size());
+        options.get(list + 1).click();
     }
 
     public void CheckBox() {
-        browser.findElement(By.id("id=UserSendEmailOptIn")).click();
+        browser.findElement(By.id("UserSendEmailOptIn")).click();
     }
 
     public void Save() {
         browser.findElement(By.id("BTN_AppMentorshipUserProfileSave")).click();
     }
 
-
+    public void language() {
+        browser.findElement(By.xpath("//body/div[1]/div[2]/div[1]/div[1]/select[1]")).click();
+        WebElement dropdown = browser.findElement(By.xpath("//body/div[1]/div[2]/div[1]/div[1]/select[1]"));
+        List<WebElement> options = dropdown.findElements(By.cssSelector("option"));
+        Random rand = new Random();
+        int list = rand.nextInt(options.size());
+        options.get(list + 1).click();
+    }
 }
+
+
+
 

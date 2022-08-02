@@ -44,11 +44,6 @@ public class RespondsToACaseTest {
         Thread.sleep(5000);
         this.Responds.SubmitComments();
         Thread.sleep(5000);
-
-
-
-
-
     }
 
 
