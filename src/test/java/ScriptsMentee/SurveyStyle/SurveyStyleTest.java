@@ -1,6 +1,6 @@
 package ScriptsMentee.SurveyStyle;
 
-import ScriptsMentee.CreationPerfil.CreationPerfilPage;
+
 import atu.testrecorder.exceptions.ATUTestRecorderException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -75,6 +75,7 @@ public class SurveyStyleTest {
         this.SurveyStyle.AnchorAssessment20();
         Thread.sleep(5000);
         this.SurveyStyle.Submitted();
+        Thread.sleep(5000);
 
 
 
