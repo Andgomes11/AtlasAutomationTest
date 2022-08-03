@@ -22,7 +22,7 @@ public class CreationPerfilTest {
     public void MustLogIn() throws InterruptedException {
         this.loginUser.login("anderson.gomes+mentor002@go2atlas.com", "123456");
         this.loginUser.submit();
-        Thread.sleep(5000);
+        Thread.sleep(10000);
         this.loginUser.Gender();
         Thread.sleep(5000);
         this.loginUser.Avatar();

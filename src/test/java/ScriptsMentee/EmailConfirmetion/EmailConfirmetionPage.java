@@ -20,7 +20,7 @@ public class EmailConfirmetionPage {
 
 
     public EmailConfirmetionPage() throws ATUTestRecorderException {
-        System.setProperty("webdriver.chrome.driver", "Drivers/Chrome-chromedriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "Drivers/Chrome-chromedriver-new/chromedriver.exe");
         this.browser = new ChromeDriver();
         this.browser.navigate().to(URL_EMAILCONFIRM);
 

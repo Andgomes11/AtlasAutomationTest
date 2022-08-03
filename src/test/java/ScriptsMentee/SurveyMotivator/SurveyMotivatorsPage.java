@@ -20,7 +20,7 @@ public class SurveyMotivatorsPage {
     ATUTestRecorder recorder;
 
     public SurveyMotivatorsPage() throws ATUTestRecorderException {
-        System.setProperty("webdriver.chrome.driver", "Drivers/Chrome-chromedriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "Drivers/Chrome-chromedriver-new/chromedriver.exe");
         this.browser = new ChromeDriver();
         browser.navigate().to(URL_USERLOGIN);
         browser.manage().window().maximize();

@@ -19,7 +19,7 @@ public class RegistrationPage {
     ATUTestRecorder recorder;
 
     public RegistrationPage() throws ATUTestRecorderException {
-        System.setProperty("webdriver.chrome.driver", "Drivers/Chrome-chromedriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "Drivers/Chrome-chromedriver-new/chromedriver.exe");
         this.browser = new ChromeDriver();
         this.browser.navigate().to("https://app.go2atlas.com/version-test/user-signup");
         browser.manage().window().maximize();
