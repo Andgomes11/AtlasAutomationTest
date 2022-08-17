@@ -75,7 +75,7 @@ public class SurveyStyleTest {
         this.SurveyStyle.AnchorAssessment20();
         Thread.sleep(5000);
         this.SurveyStyle.Submitted();
-        Thread.sleep(5000);
+        Thread.sleep(10000);
 
 
 

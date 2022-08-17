@@ -1,4 +1,5 @@
-package UserNonAuthenticated;
+package UserNonAuthenticated.SurveySkillsAndKnowLedge;
+
 
 
 import atu.testrecorder.exceptions.ATUTestRecorderException;
@@ -13,18 +14,18 @@ public class SurveySkillsAndKnowledgeTest {
     public void beforeEach() throws ATUTestRecorderException {
         this.Skills = new SurveySkillsAndKnowledgePage();
     }
-   // @AfterEach
+    @AfterEach
     public void afterEach() throws ATUTestRecorderException {
         this.Skills.close();
     }
 
     @Test
     public void FindCareer() throws InterruptedException {
-
-        this.Skills.language();
-        Thread.sleep(10000);
-        this.Skills.findCareer();
         Thread.sleep(5000);
+        this.Skills.language();
+        Thread.sleep(5000);
+        this.Skills.findCareer();
+        Thread.sleep(15000);
         this.Skills.SelectorSkills1();
         Thread.sleep(2000);
         this.Skills.SelectorSkills2();
@@ -89,15 +90,10 @@ public class SurveySkillsAndKnowledgeTest {
         Thread.sleep(2000);
         this.Skills.SelectorSkills32();
         Thread.sleep(2000);
-        this.Skills.submit();
+        this.Skills.RadioButton();
+        Thread.sleep(2000);
+        this.Skills.Submitted();
         Thread.sleep(10000);
-        this.Skills.LeadsSend();
-        Thread.sleep(10000);
-
 
     }
-
-
-
-
 }

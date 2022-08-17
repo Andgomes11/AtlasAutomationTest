@@ -1,8 +1,9 @@
-package UserNonAuthenticated;
+package UserNonAuthenticated.SurveySkillsAndKnowLedge;
 
 import atu.testrecorder.ATUTestRecorder;
 import atu.testrecorder.exceptions.ATUTestRecorderException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -41,7 +42,6 @@ public class SurveySkillsAndKnowledgePage {
 
 
     public void language() {
-            browser.findElement(By.id("ChooseLanguage")).click();
             WebElement dropdown = browser.findElement(By.id("ChooseLanguage"));
             List<WebElement> options = dropdown.findElements(By.cssSelector("option"));
             Random rand = new Random();
@@ -313,11 +313,17 @@ public class SurveySkillsAndKnowledgePage {
 
     }
 
-    public void submit() {
-        browser.findElement(By.id("BTN_AppAnchorAssessmentSubmit")).click();
+
+    public void Submitted() {
+        browser.findElement(By.id("BTN_AppSkillAssessmentSubmit")).click();
     }
 
-    public void LeadsSend() {
-        browser.findElement(By.id("BTN_AppAnchorAssessmentLeadsSend")).click();
+    public void RadioButton() {
+        WebElement dropdown = browser.findElement(By.id("RadioButtonDegrees"));
+        List<WebElement> options = dropdown.findElements(By.cssSelector("label"));
+        Random rand = new Random();
+        int list = rand.nextInt(options.size());
+        options.get(list).click();
+
     }
 }

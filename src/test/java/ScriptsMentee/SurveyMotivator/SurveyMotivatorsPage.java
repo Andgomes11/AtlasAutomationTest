@@ -3,6 +3,7 @@ package ScriptsMentee.SurveyMotivator;
 import atu.testrecorder.ATUTestRecorder;
 import atu.testrecorder.exceptions.ATUTestRecorderException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,7 +24,7 @@ public class SurveyMotivatorsPage {
         System.setProperty("webdriver.chrome.driver", "Drivers/Chrome-chromedriver-new/chromedriver.exe");
         this.browser = new ChromeDriver();
         browser.navigate().to(URL_USERLOGIN);
-        browser.manage().window().maximize();
+        browser.manage().window().setSize(new Dimension(1170, 2532));
 
         DateFormat d = new SimpleDateFormat("yy−mm−dd HH−mm−ss");
         Date date = new Date();

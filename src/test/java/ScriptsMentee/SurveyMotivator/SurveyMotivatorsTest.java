@@ -75,7 +75,7 @@ public class SurveyMotivatorsTest {
         this.SurveyMotivator.AnchorAssessment20();
         Thread.sleep(2000);
         this.SurveyMotivator.Submitted();
-        Thread.sleep(2000);
+        Thread.sleep(10000);
     }
 
 
