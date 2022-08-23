@@ -94,6 +94,8 @@ public class SurveySkillsAndKnowledgeTest {
         Thread.sleep(2000);
         this.Skills.Submitted();
         Thread.sleep(10000);
+        this.Skills.Continue();
+        Thread.sleep(10000);
 
     }
 }

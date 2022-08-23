@@ -326,4 +326,8 @@ public class SurveySkillsAndKnowledgePage {
         options.get(list).click();
 
     }
+
+    public void Continue() {
+        browser.findElement(By.id("BTN_AppSkillAndKnowAssessmentLeadsSend")).click();
+    }
 }

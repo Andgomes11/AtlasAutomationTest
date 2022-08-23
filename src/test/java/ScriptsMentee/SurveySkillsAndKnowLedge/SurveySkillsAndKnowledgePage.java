@@ -29,7 +29,7 @@ public class SurveySkillsAndKnowledgePage {
         DateFormat d = new SimpleDateFormat("yy−mm−dd HH−mm−ss");
         Date date = new Date();
 
-        recorder = new ATUTestRecorder("C:\\Users\\ander\\OneDrive\\Área de Trabalho\\AtlasAutomationTest\\Test Evidence\\User Non Authenticated", "Survey Skills And Know LedgeTest" + d.format(date), false);
+        recorder = new ATUTestRecorder("C:\\Users\\ander\\OneDrive\\Área de Trabalho\\AtlasAutomationTest\\Test Evidence\\Mentee", "Survey Skills And Know LedgeTest" + d.format(date), false);
         recorder.start();
 
     }
