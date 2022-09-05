@@ -52,8 +52,8 @@ public class CreationPerfilPage {
     }
 
     public void submit() {
-        browser.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/button[1]")).click();
-        browser.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/button[1]")).click();
+        browser.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[2]/button[1]")).click();
+        browser.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[2]/button[1]")).click();
 
     }
 
@@ -69,8 +69,8 @@ public class CreationPerfilPage {
 
     public void Avatar() throws InterruptedException {
         browser.findElement(By.id("UserAvatar")).click();
-        //browser.findElement(By.id("BTN_AppMentorshipUserAvatarRandom")).click();
-        //browser.findElement(By.id("BTN_AppMentorshipUserAvatarChoosen")).click();
+        browser.findElement(By.id("BTN_AppMentorshipUserAvatarRandom")).click();
+        browser.findElement(By.id("BTN_AppMentorshipUserAvatarChoosen")).click();
         browser.findElement(By.id("dropDownHair")).click();
         WebElement dropdown = browser.findElement(By.id("dropDownHair"));
         List<WebElement> options = dropdown.findElements(By.cssSelector("#dropDownHair >option"));
@@ -176,8 +176,8 @@ public class CreationPerfilPage {
     }
 
     public void language() {
-        browser.findElement(By.xpath("//body/div[1]/div[2]/div[1]/div[1]/select[1]")).click();
-        WebElement dropdown = browser.findElement(By.xpath("//body/div[1]/div[2]/div[1]/div[1]/select[1]"));
+        browser.findElement(By.id("ChooseLanguage")).click();
+        WebElement dropdown = browser.findElement(By.id("ChooseLanguage"));
         List<WebElement> options = dropdown.findElements(By.cssSelector("option"));
         Random rand = new Random();
         int list = rand.nextInt(options.size());

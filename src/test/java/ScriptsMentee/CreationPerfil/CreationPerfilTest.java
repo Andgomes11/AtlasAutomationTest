@@ -23,7 +23,8 @@ public class CreationPerfilTest {
     public void MustLogIn() throws InterruptedException {
         this.loginUser.language();
         Thread.sleep(10000);
-        this.loginUser.login("anderson.gomes+mentee006@go2atlas.com", "123456");
+        this.loginUser.login("anderson.gomes+mentee003@go2atlas.com", "12345");
+        Thread.sleep(2000);
         this.loginUser.submit();
         Thread.sleep(5000);
         this.loginUser.Gender();

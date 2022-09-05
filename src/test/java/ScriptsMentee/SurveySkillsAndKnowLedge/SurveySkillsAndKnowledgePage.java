@@ -48,8 +48,8 @@ public class SurveySkillsAndKnowledgePage {
     }
 
     public void submit() {
-        browser.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/button[1]")).click();
-        browser.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[2]/button[1]")).click();
+        browser.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[2]/button[1]")).click();
+        browser.findElement(By.xpath("/html/body/div[2]/div[2]/div/div[2]/button[1]")).click();
 
     }
 
